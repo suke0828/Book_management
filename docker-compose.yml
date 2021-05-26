@@ -1,0 +1,29 @@
+version: '3'
+services:
+  postgresql:
+    image: postgres:12
+    volumes:
+      - ./docker/postgresql/data:/usr/local/var/postgres
+    ports:
+      - 127.0.0.1:5434:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword1234
+      PGDATA: /usr/local/var/postgres
+  elasticsearch:
+    build:
+      context: .
+      dockerfile: ./docker/elasticsearch/Dockerfile
+    volumes:
+      - ./docker/elasticsearch/data:/usr/share/elasticsearch/data
+    ports:
+      - 127.0.0.1:9200:9200
+    environment:
+      - discovery.type=single-node
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1

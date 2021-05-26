@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  port: 5432
+  username: postgres
+  password: mysecretpassword1234
+  host: 127.0.0.1
+  encoding: unicode
+  pool: 5
+development:
+  <<: *default
+  database: Book_management_development
+test:
+  <<: *default
+  database: Book_management_test
+production:
+  <<: *default
+  database: Book_management_production
+  username: Book_management
+  password: <%= ENV['BOOK_MANAGEMENT_DATABASE_PASSWORD'] %>
