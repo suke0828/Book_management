@@ -1,0 +1,27 @@
+<h1>Books</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Isbn</th>
+      <th>Title</th>
+      <th>Publisher</th>
+      <th>Pubdate</th>
+      <th>Cover</th>
+      <th>Author</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.isbn %></td>
+        <td><%= book.title %></td>
+        <td><%= book.publisher %></td>
+        <td><%= book.pubdate %></td>
+        <td><%= book.cover %></td>
+        <td><%= book.author %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
