@@ -34,3 +34,20 @@ Style/AsciiComments:
 # メソッドの行数チェック
 Metrics/MethodLength:
   Max: 11
+
+# ブロックの長さをチェック
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
+# ネストされたグループをチェック
+RSpec/NestedGroups:
+  Max: 4
+
+# 日本語だと「〜の場合」になるので suffix でないと対応できない
+RSpec/ContextWording:
+  Enabled: false
+
+# spec内のファイルパスが一致しているかチェック
+RSpec/FilePath:
+  Enabled: false
