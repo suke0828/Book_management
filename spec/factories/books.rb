@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :book do
-    isbn { 9_784_797_395_235 }
-    title { '１分で話せ' }
-    publisher { 'SBクリエイティブ' }
-    pubdate { 20_180_315 }
-    cover { 'https://cover.openbd.jp/9784797395235.jpg' }
-    author { '伊藤羊一／著' }
+    isbn { 0o000000000000 }
+    title { 'Sample' }
+    publisher { 'Sample出版' }
+    pubdate { 20_210_530 }
+    cover { 'https://cover.openbd.jp/0000000000000.jpg' }
+    author { 'Sample太郎' }
   end
 end

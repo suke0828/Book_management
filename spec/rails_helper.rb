@@ -61,4 +61,13 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  # elasticsearchのテストの場合のみIndexを作成する
+  config.before do |example|
+    if example.metadata[:elasticsearch] && example.metadata[:model_name]
+      # meta情報のモデル名の文字列をクラス定数に変換し、Elasticsearchのindexを作成する
+      class_constant = example.metadata[:model_name].classify.constantize
+      class_constant.create_index!
+    end
+  end
 end
