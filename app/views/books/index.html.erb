@@ -1,5 +1,16 @@
 <h1>Books</h1>
 
+<div class="container">
+  <%= form_tag(books_path, method: :get, class: "field has-addons has-addons-centered") do %>
+    <div class="control">
+      <%= text_field_tag :query, @query, class: "input", placeholder: "本を検索する" %>
+    </div>
+    <div class="control">
+      <%= submit_tag "検索", class: "button is-info" %>
+    </div>
+  <% end %>
+</div>
+
 <table>
   <thead>
     <tr>
