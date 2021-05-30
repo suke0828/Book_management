@@ -44,5 +44,18 @@ module BookSearch
                               })
       end
     end
+
+    def search(query)
+      elasticsearch__.search({
+                               query: {
+                                 multi_match: {
+                                   fields: %w[isbn title publisher pubdate author],
+                                   type: 'cross_fields',
+                                   query: query,
+                                   operator: 'and'
+                                 }
+                               }
+                             })
+    end
   end
 end
