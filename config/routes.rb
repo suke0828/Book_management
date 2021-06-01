@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   root 'books#index'
-  resources :books, only: %i[index]
+  resources :books, only: %i[index new create]
 end

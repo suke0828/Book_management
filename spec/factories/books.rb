@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :book do
-    isbn { 0o000000000000 }
-    title { 'Sample' }
-    publisher { 'Sample出版' }
-    pubdate { 20_210_530 }
-    cover { 'https://cover.openbd.jp/0000000000000.jpg' }
-    author { 'Sample太郎' }
+    isbn { 9_784_274_226_298 }
+    title { '達人プログラマー（第2版)' }
+    publisher { 'オーム社' }
+    pubdate { 20_201_121 }
+    cover { 'https://cover.openbd.jp/9784274226298.jpg' }
+    author { 'AndrewHunt／著 DavidThomas／著 村上雅章／翻訳' }
   end
 end
