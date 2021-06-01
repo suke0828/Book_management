@@ -51,3 +51,7 @@ RSpec/ContextWording:
 # spec内のファイルパスが一致しているかチェック
 RSpec/FilePath:
   Enabled: false
+
+# ABCサイズが設定された最大値を超えていないことをチェック/assignments(変数への代入), branches(メソッドの呼び出し), conditions(条件文)
+Metrics/AbcSize:
+  Max: 25
