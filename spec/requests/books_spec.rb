@@ -34,22 +34,22 @@ RSpec.describe 'Books', type: :request do
       end
     end
 
-    # context 'パラメータが不正な場合' do
-    #   it 'リクエストが成功すること' do
-    #     post books_path, params: { book: { isbn: 0 } }
-    #     expect(response.status).to eq have_http_status(:ok)
-    #   end
+    context 'パラメータが不正な場合' do
+      it 'リクエストが成功すること' do
+        post books_path, params: { book: { isbn: 0 } }
+        expect(response).to have_http_status(:found)
+      end
 
-    #   it '書籍情報が登録されないこと' do
-    #     expect do
-    #       post books_path, params: { book: { isbn: 0 } }
-    #     end.not_to change(Book, :count)
-    #   end
+      it '書籍情報が登録されないこと' do
+        expect do
+          post books_path, params: { book: { isbn: 0 } }
+        end.not_to change(Book, :count)
+      end
 
-    #   it 'エラーが表示されること' do
-    #     post books_path, params: { book: { isbn: 0 } }
-    #     expect(response.body).to include 'undefined method'
-    #   end
-    # end
+      it 'エラーが表示されること' do
+        post books_path, params: { book: { isbn: 0 } }
+        expect(flash[:alert]).to eq('status: 500 Internal Server Error')
+      end
+    end
   end
 end
