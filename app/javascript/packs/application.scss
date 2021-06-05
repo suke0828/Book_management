@@ -1,0 +1,25 @@
+@import '~bulma/css/bulma.min';
+
+.table{
+	border: 5px solid olivedrab;
+	border-collapse: separate;
+	border-spacing: 10px;
+	margin: auto;
+	text-align: center;
+	width: 70%;
+	tr{
+		td {
+			border: 3px solid olivedrab;
+			box-shadow: 1px 1px;
+			color: olivedrab;
+			font-weight: bold;
+		}
+		th{
+			background-color: olivedrab;
+			color: white;
+		}
+		th.table-index {
+				width: 5px;
+			}
+	}
+}
