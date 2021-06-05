@@ -1,38 +1,32 @@
 <h1>Books</h1>
 
-<div class="container">
+<div class="block">
   <%= form_tag(books_path, method: :get, class: "field has-addons has-addons-centered") do %>
-    <div class="control">
-      <%= text_field_tag :query, @query, class: "input", placeholder: "本を検索する" %>
-    </div>
-    <div class="control">
-      <%= submit_tag "検索", class: "button is-info" %>
-    </div>
+  <div class="control">
+    <%= text_field_tag :query, @query, class: "input", placeholder: "本を検索する" %>
+  </div>
+  <div class="control">
+    <%= submit_tag "検索", class: "button is-info" %>
+  </div>
   <% end %>
 </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Isbn</th>
-      <th>Title</th>
-      <th>Publisher</th>
-      <th>Pubdate</th>
-      <th>Cover</th>
-      <th>Author</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @books.each do |book| %>
+<div class="block">
+  <table class='table is-bordered is-striped is-hoverable'>
+    <thead>
       <tr>
-        <td><%= book.isbn %></td>
-        <td><%= book.title %></td>
-        <td><%= book.publisher %></td>
-        <td><%= book.pubdate %></td>
-        <td><%= book.cover %></td>
-        <td><%= book.author %></td>
+        <th class="table-index">index</th>
+        <th>Title</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @books.each.with_index(1) do |book, index| %>
+      <tr>
+        <th class="table-index"><%= "#{index}" %></th>
+        <td><%= book.title %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
