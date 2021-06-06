@@ -6,9 +6,19 @@
     <%= text_field_tag :query, @query, class: "input", placeholder: "本を検索する" %>
   </div>
   <div class="control">
-    <%= submit_tag "検索", class: "button is-info" %>
+    <%= submit_tag "検索", class: "button" %>
   </div>
   <% end %>
+</div>
+
+<div class="block">
+  <div class="tabs is-centered">
+    <ul>
+      <li class="is-active"><%= link_to "書籍一覧", books_path %></li>
+      <li><%= link_to "書籍追加", new_book_path %></li>
+      <li><%= link_to "書籍検索", '#' %></li>
+    </ul>
+  </div>
 </div>
 
 <div class="block">
