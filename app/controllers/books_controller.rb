@@ -11,6 +11,14 @@ class BooksController < ApplicationController
     @book = Book.new
   end
 
+  def show
+    @book = Book.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   def create
     book = Book.new(book_params)
     json_api_data = call_openbd_api(book.isbn)

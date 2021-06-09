@@ -4,6 +4,7 @@
 	background-color: olivedrab;
 	color: white;
 	font-weight: bold;
+	text-align: center;
 	&:hover {
 		background-color: white;
 		color: olivedrab;
@@ -27,6 +28,7 @@
 		th{
 			background-color: olivedrab;
 			color: white;
+			white-space: nowrap;
 		}
 		th.table-index {
 				width: 5px;
