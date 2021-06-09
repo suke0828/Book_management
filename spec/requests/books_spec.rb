@@ -15,6 +15,14 @@ RSpec.describe 'Books', type: :request do
     end
   end
 
+  describe 'GET /show' do
+    it '正常にレスポンスをを返すこと' do
+      book = FactoryBot.create(:book)
+      get book_path(book.id), xhr: true
+      expect(response).to have_http_status(:ok)
+    end
+  end
+
   describe 'POST /create' do
     context 'パラメータが正常な場合' do
       it '正常にレスポンスをを返すこと' do
