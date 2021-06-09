@@ -1,0 +1,46 @@
+<div class="modal">
+	<div class="modal-background"></div>
+	<div class="modal-card">
+		<header class="modal-card-head">
+			<p class="modal-card-title">書籍詳細</p>
+			<button class="delete" aria-label="close"></button>
+		</header>
+		<section class="modal-card-body">
+			<div class="container">
+				<table class='table is-hoverable'>
+					<tbody>
+						<tr>
+							<th>書籍名</th>
+							<td><%= @book.title %></td>
+						</tr>
+						<tr>
+							<th>表紙</th>
+							<td><%= image_tag @book.cover, alt: '表紙' %></td>
+						</tr>
+						<tr>
+							<th>著者</th>
+							<td><%= @book.author %></td>
+						</tr>
+						<tr>
+							<th>出版社</th>
+							<td><%= @book.publisher %></td>
+						</tr>
+						<tr>
+							<th>出版日</th>
+							<td><%= @book.pubdate %></td>
+						</tr>
+						<tr>
+							<th>ISBN</th>
+							<td><%= @book.isbn %></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		<footer class="modal-card-foot">
+		<div class="container has-text-centered">
+			<button class="button">画面のどこをクリックしても閉じます</button>
+		</div>
+		</footer>
+	</div>
+</div>
