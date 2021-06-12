@@ -55,3 +55,7 @@ RSpec/FilePath:
 # ABCサイズが設定された最大値を超えていないことをチェック/assignments(変数への代入), branches(メソッドの呼び出し), conditions(条件文)
 Metrics/AbcSize:
   Max: 25
+
+# exampleの長さをチェック
+RSpec/ExampleLength:
+  Max: 10
