@@ -1,0 +1,13 @@
+var tab_contents_id 	 = document.getElementById('tab_contents');
+var tab_contents_class = document.getElementsByClassName('tab_index');
+var tab_btn            = document.querySelector('.tab_new');
+
+tab_contents_id.innerHTML = ("<%= escape_javascript(render 'index') %>");
+
+// クリックされたら書籍一覧タブをアクティブ化する
+tab_contents_class[0].classList.add('is-active');
+
+// 書籍追加タブがクリックされたときにis-activeを削除して書籍一覧タブを非アクティブ化する
+tab_btn.addEventListener('click', () => {
+  tab_contents_class[0].classList.remove('is-active');
+});
