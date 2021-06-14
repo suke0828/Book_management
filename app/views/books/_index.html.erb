@@ -1,0 +1,18 @@
+<div class="block">
+  <table class='table is-bordered is-striped is-hoverable'>
+    <thead>
+      <tr>
+        <th class="table-index">index</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @books.each.with_index(1) do |book, index| %>
+      <tr>
+        <th class="table-index"><%= "#{index}" %></th>
+        <td><%= link_to book.title, book_path(book), remote: true %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
