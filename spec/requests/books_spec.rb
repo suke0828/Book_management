@@ -10,7 +10,7 @@ RSpec.describe 'Books', type: :request do
 
   describe 'GET /new' do
     it '正常にレスポンスをを返すこと' do
-      get new_book_path
+      get new_book_path, xhr: true
       expect(response).to have_http_status(:ok)
     end
   end
