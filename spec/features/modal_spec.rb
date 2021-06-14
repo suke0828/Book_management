@@ -12,7 +12,7 @@ RSpec.describe 'モーダルウィンドウ', type: :feature, js: true do
     expect(page).to have_css('div.is-active')
   end
 
-  it '画面をクリックしたら詳細画面が閉じるること' do
+  it '画面をクリックしたら詳細画面が閉じること' do
     visit root_path
     have_content(book.title.to_s)
     click_link(book.title.to_s)
