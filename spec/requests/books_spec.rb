@@ -60,4 +60,24 @@ RSpec.describe 'Books', type: :request do
       end
     end
   end
+
+  describe 'DELETE /destroy' do
+    let!(:book) { FactoryBot.create(:book) }
+
+    it '正常にレスポンスをを返すこと' do
+      delete book_path book
+      expect(response).to have_http_status(:found)
+    end
+
+    it '書籍情報が削除されること' do
+      expect do
+        delete book_path book
+      end.to change(Book, :count).by(-1)
+    end
+
+    it 'リダイレクトすること' do
+      delete book_path book
+      expect(response).to redirect_to root_path
+    end
+  end
 end
