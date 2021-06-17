@@ -2,6 +2,7 @@
 
 a {
 	color: olivedrab;
+	display: block;
 }
 
 .button {
@@ -15,42 +16,49 @@ a {
 	}
 }
 
-.table{
+.inverted {
+	a {
+		background-color: olivedrab;
+		color: white;
+		&:hover {
+			background-color: white;
+			color: olivedrab;
+		}
+	}
+}
+
+.table {
 	border: 5px solid olivedrab;
 	border-collapse: separate;
 	border-spacing: 10px;
 	margin: auto;
 	text-align: center;
 	width: 70%;
-	tr{
+	tr {
 		td {
 			border: 3px solid olivedrab;
 			box-shadow: 1px 1px;
 			color: olivedrab;
 			font-weight: bold;
+			padding: 0;
+			a {
+				padding: 8px 12px;
+			}
 		}
-		th{
+		th {
 			background-color: olivedrab;
 			color: white;
 			white-space: nowrap;
 		}
-		th.table-index {
+		.table-index {
 				width: 5px;
 			}
 	}
 }
 
-.tabs{
+.tabs {
 	font-weight: bold;
-	a{
-		color: white;
-		background-color: olivedrab;
-		&:hover{
-			color: olivedrab;
-			background-color: white;
-		}
-	}
-	li.is-active{
+	li.is-active {
 		a{
 			background-color: white;
 			color: olivedrab;
