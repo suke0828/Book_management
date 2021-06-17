@@ -4,13 +4,19 @@
       <tr>
         <th class="table-index">index</th>
         <th>Title</th>
+        <th>Button</th>
       </tr>
     </thead>
     <tbody>
       <% @books.each.with_index(1) do |book, index| %>
       <tr>
         <th class="table-index"><%= "#{index}" %></th>
-        <td><%= link_to book.title, book_path(book), remote: true %></td>
+        <td>
+        <%= link_to book.title, book_path(book), remote: true %>
+        </td>
+        <td class="table-index inverted">
+        <%= link_to 'DELETE', book_path(book), method: :delete, data: {confirm: '本当に削除しますか?'} %>
+        </td>
       </tr>
       <% end %>
     </tbody>
