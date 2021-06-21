@@ -36,6 +36,11 @@ RSpec.describe 'Books', type: :request do
         end.to change(Book, :count).by(1)
       end
 
+      it 'flashメッセージ[:success]が表示されること' do
+        post books_path, params: { book: { isbn: 9_784_797_395_235 } }
+        expect(flash[:success]).to be_truthy
+      end
+
       it 'リダイレクトすること' do
         post books_path, params: { book: { isbn: 9_784_797_395_235 } }
         expect(response).to redirect_to root_path
@@ -56,7 +61,7 @@ RSpec.describe 'Books', type: :request do
 
       it 'エラーが表示されること' do
         post books_path, params: { book: { isbn: 0 } }
-        expect(flash[:alert]).to eq('status: 500 Internal Server Error')
+        expect(flash[:warning]).to be_truthy
       end
     end
   end

@@ -23,7 +23,7 @@ class BooksController < ApplicationController
     book = Book.new(book_params)
     json_api_data = call_openbd_api(book.isbn)
     if error_call_api(json_api_data)
-      redirect_to new_book_path
+      redirect_to book
     else
       Book.create(
         get_json(json_api_data)

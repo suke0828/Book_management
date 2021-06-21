@@ -14,7 +14,9 @@
 
 <body>
   <% flash.each do |message_type, message| %>
-  <%= message %>
+  <div class="notification is-<%= message_type %> is-light">
+    <%= message %>
+  </div>
   <% end %>
   <%= yield %>
 </body>
