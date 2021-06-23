@@ -39,5 +39,8 @@ module BookManagement
       g.assets false
       g.test_framework :rspec, view_specs: false, helper_specs: false
     end
+
+    config.time_zone = 'Asia/Tokyo'
+    config.i18n.default_locale = :ja
   end
 end
