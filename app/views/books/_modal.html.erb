@@ -33,6 +33,10 @@
 							<th>ISBN</th>
 							<td><%= @book.isbn %></td>
 						</tr>
+						<tr>
+							<th>登録日</th>
+							<td><%= l @book.created_at, format: :short %></td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
