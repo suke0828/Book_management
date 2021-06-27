@@ -5,6 +5,7 @@ RSpec.describe 'モーダルウィンドウ', type: :feature, js: true do
 
   before do
     visit root_path
+    click_link '書籍一覧'
     have_content(book.title.to_s)
     click_link(book.title.to_s)
     have_selector('.modal-card-title', text: '書籍詳細')

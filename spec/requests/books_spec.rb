@@ -50,7 +50,7 @@ RSpec.describe 'Books', type: :request do
     context 'パラメータが不正な場合' do
       it 'リクエストが成功すること' do
         post books_path, params: { book: { isbn: 0 } }
-        expect(response).to have_http_status(:found)
+        expect(response).to have_http_status(:ok)
       end
 
       it '書籍情報が登録されないこと' do

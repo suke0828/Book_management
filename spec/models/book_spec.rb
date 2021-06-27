@@ -9,6 +9,6 @@ RSpec.describe Book, type: :model do
   it 'isbnが無い場合、無効であること' do
     book = described_class.new(isbn: nil)
     book.valid?
-    expect(book.errors[:isbn]).to include("can't be blank")
+    expect(book.errors[:isbn]).to include('Isbnを入力してください')
   end
 end
