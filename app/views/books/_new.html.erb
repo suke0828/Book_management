@@ -5,7 +5,7 @@
         <h1 class="panel-heading">書籍登録</h1>
         <div class="panel-block">
           <div class="control p-6">
-            <%= form_with(model: @book, local: true) do |form| %>
+            <%= form_with(url: books_path, model: Book.new) do |form| %>
             <div class="panel-block is-fullwidth">
               <div class="control">
                 <%= form.label :isbn, "ISBNコード", class: "label" %>
