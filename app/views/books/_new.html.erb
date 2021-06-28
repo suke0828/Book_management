@@ -1,24 +1,23 @@
-<div class="container">
-  <div class="block">
-    <div class="column is-three-fifths is-offset-one-fifth">
-      <div class="panel">
-        <h1 class="panel-heading">書籍登録</h1>
-        <div class="panel-block">
-          <div class="control p-6">
-            <%= form_with(url: books_path, model: Book.new) do |form| %>
-            <div class="panel-block is-fullwidth">
-              <div class="control">
-                <%= form.label :isbn, "ISBNコード", class: "label" %>
-                <%= form.text_field :isbn, class: "input", placeholder: "ISBNコードを入力" %>
-              </div>
-            </div>
-            <div class="panel-block">
-              <%= form.submit :"登録", class: "button is-fullwidth" %>
-            </div>
-            <% end %>
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <h1 class="modal-card-title">書籍追加</h1>
+      <button class="delete" aria-label="close" id="delete"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="container">
+        <div class="control p-6">
+          <%= form_with(url: books_path, model: Book.new) do |form| %>
+          <div class="control py-6">
+            <%= form.label :isbn, "ISBNコード", class: "label" %>
+            <%= form.text_field :isbn, class: "input", placeholder: "ISBNコードを入力" %>
           </div>
+          <%= form.submit :"登録", class: "button is-fullwidth" %>
+          <% end %>
         </div>
       </div>
-    </div>
+    </section>
   </div>
+</div>
 </div>
