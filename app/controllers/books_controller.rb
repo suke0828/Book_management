@@ -23,14 +23,14 @@ class BooksController < ApplicationController
     book = Book.new(book_params)
     json_api_data = call_openbd_api(book.isbn)
     if error_call_api(json_api_data)
-      render 'index'
+      response_internal_server_error
     else
       Book.create(
         get_json(json_api_data)
       )
       response_success(:book, :create)
-      redirect_to root_path
     end
+    redirect_to root_path
   end
 
   def destroy
