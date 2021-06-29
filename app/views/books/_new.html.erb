@@ -1,4 +1,4 @@
-<div class="modal">
+<div class="modal modal-new">
   <div class="modal-background"></div>
   <div class="modal-card">
     <header class="modal-card-head">
@@ -9,7 +9,7 @@
       <div class="container">
         <div class="control p-6">
           <%= form_with(url: books_path, model: Book.new) do |form| %>
-          <div class="control py-6">
+          <div class="control pb-6">
             <%= form.label :isbn, "ISBNコード", class: "label" %>
             <%= form.text_field :isbn, class: "input", placeholder: "ISBNコードを入力" %>
           </div>
