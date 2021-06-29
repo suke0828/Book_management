@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
 
   # 500 Internal Server Error
   def response_internal_server_error
-    flash.now[:warning] = '書籍が見つからないため登録できませんでした'
+    flash[:warning] = '書籍が見つからないため登録できませんでした'
   end
 end
