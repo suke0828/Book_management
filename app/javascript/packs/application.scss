@@ -40,10 +40,14 @@ a {
 	color: olivedrab;
 }
 
-.panel-heading {
+.modal-card-head {
 	background-color: olivedrab;
-	color: white;
 	text-align: center;
+}
+
+.modal-card-title {
+	color: white;
+	font-weight: bold;
 }
 
 .table {
