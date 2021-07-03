@@ -9,20 +9,18 @@
 * [概要](#book_management)
 * [使い方](#使い方)
 * [使用技術](#使用技術)
-* [インフラ構成図](#インフラ構成図)
-* [天気を取得する仕組み](#天気を取得する仕組み)
+* [アプリの機能の説明](#アプリの機能の説明)
+* [アプリの仕組み](#アプリの仕組み)
 * [注意事項](#注意事項)
 * [Authors](#authors)
 * [使用API](#使用API)
 </br></br>
 
 # Book_Management
-ISBNコードを入力して書籍を登録できます</br>
-<!-- 簡単なデモ（使用例）などスクリーンショットやGIFアニメで表示 -->
 <!-- index page -->
-<img width="100%" alt="お天気HISTORY indexpage" src="https://user-images.githubusercontent.com/70358393/115184305-80f8ad00-a118-11eb-9cca-592aac0612dd.png"></br>
-<!-- show page -->
-<img width="100%" alt="神奈川県___お天気HISTORY showpage" src="https://user-images.githubusercontent.com/70358393/115185097-252f2380-a11a-11eb-839a-d8c0d96d2649.png"></br>
+ISBNコードを入力して書籍を登録できます</br>
+<img width="100%" alt="index_page" src="https://user-images.githubusercontent.com/70358393/124338563-98a5e480-dbe3-11eb-8a07-f89ee1283fa0.png"></br>
+</br>
 
 ### 使い方
 このアプリケーションを使うためには`Webpacker`のインストールが必要になります
@@ -64,9 +62,22 @@ Note:`rails webpacker:install`をした際に`node`や`yarn`が入っていな�
 
 ## アプリの機能の説明
 Rails6 + Elasticsearch + openBD</br>
-・ISBNコードを入力して書籍登録するとopenBD APIからデータを取得してElasticsearchとDBに取得したデータを保存します</br>
+</br>
+
+<!-- new page -->
+・ISBNコードを入力して書籍登録するとElasticsearchとDBに、openBD APIから取得したデータを保存します</br>
+<img width="100%" alt="new_page" src="https://user-images.githubusercontent.com/70358393/124338659-25e93900-dbe4-11eb-994f-9ad4d7d67f47.png"></br>
+</br>
+
+<!-- search page -->
 ・検索窓で登録した書籍を検索できます</br>
-・詳細画面から登録した書籍のデータと登録日を見ることができます</br>
+<img width="100%" alt="search_screen" src="https://user-images.githubusercontent.com/70358393/124338700-5fba3f80-dbe4-11eb-91d9-274fb3ea84d9.png"></br>
+</br>
+
+<!-- show page -->
+・詳細画面から登録した書籍のデータを見ることができます</br>
+<img width="100%" alt="show_page" src="https://user-images.githubusercontent.com/70358393/124338807-d2c3b600-dbe4-11eb-8394-faad4729d34a.png"></br>
+</br>
 
 ## アプリの仕組み
 [lib/tasks/import_csv.rake](lib/tasks/import_csv.rake)</br>
@@ -79,4 +90,3 @@ suke0828
 
 ## 使用API
 [・OpenBD](https://openbd.jp)
-
