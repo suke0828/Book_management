@@ -1,19 +1,15 @@
 <!-- バッジ -->
 [![GitHub issues](https://img.shields.io/github/issues/suke0828/Book_management)](https://github.com/suke0828/Book_management/issues)
 
-<!-- アイキャッチ画像 -->
-[<img width="300px" alt="お天気HISTORY_logo" src="https://user-images.githubusercontent.com/70358393/115185985-dda99700-a11b-11eb-9626-83d0b356fc58.png">](https://otenki-history.herokuapp.com/)</br>
-
 -目次
 -----------------
-* [概要](#book_management)
 * [使い方](#使い方)
 * [使用技術](#使用技術)
 * [アプリの機能の説明](#アプリの機能の説明)
 * [アプリの仕組み](#アプリの仕組み)
 * [注意事項](#注意事項)
 * [Authors](#authors)
-* [使用API](#使用API)
+* [使用API](#使用api)
 </br></br>
 
 # Book_Management
@@ -45,20 +41,18 @@ $ rails s
 ```
 [http://localhost:3000](http://localhost:3000) にブラウザでアクセス
 
-Note:`rails webpacker:install`をした際に`node`や`yarn`が入っていないとインストールできないと怒られることがあります
+Note:`rails webpacker:install`の際に`node`や`yarn`が入っていないとインストールできないことがあります
 </br>
-
 
 ## 使用技術
 ・Ruby 3.0.0</br>
 ・Rails 6.1.3.2</br>
 ・PostgreSQL 13.2</br>
 ・Docker / Docker-compose</br>
-・RSpec </br>
-・Bulma </br>
-・RSpec </br>
-・Elasticsearch 7.13.0</br>
-・openBD API</br>
+・RSpec(テストフレームワーク) </br>
+・Bulma(CSSフレームワーク) </br>
+・Elasticsearch 7.13.0(オープンソース検索エンジン)</br>
+・openBD(書籍情報・書影API)</br>
 
 ## アプリの機能の説明
 Rails6 + Elasticsearch + openBD</br>
@@ -80,10 +74,12 @@ Rails6 + Elasticsearch + openBD</br>
 </br>
 
 ## アプリの仕組み
-[lib/tasks/import_csv.rake](lib/tasks/import_csv.rake)</br>
+<!-- Architecture diagram -->
+<img width="100%" alt="Architecture_diagram" src="https://user-images.githubusercontent.com/70358393/124341226-f0e5e200-dbf5-11eb-8d5a-7ecc5830fe6b.png"></br>
+</br>
 
 ## 注意事項
-・書籍のデータがopenBDにないと登録されません</br>
+・書籍のデータがopenBDにないとDBに保存されません</br>
 
 ## Authors
 suke0828
