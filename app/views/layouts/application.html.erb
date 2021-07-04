@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
@@ -22,6 +21,21 @@
 </nav>
 <%= render 'shared/error_message' %>
   <%= yield %>
+  <footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>BookManagement</strong> by
+      <%= link_to 'https://github.com/suke0828' do %>
+      suke0828 <i class="fab fa-github"></i>
+      <% end %>
+       The repository by Github
+      <%= link_to 'https://github.com/suke0828/Book_management' do %>
+      Book_management <i class="fab fa-github"></i>
+      <% end %>
+
+    </p>
+  </div>
+</footer>
 </body>
 
 </html>
