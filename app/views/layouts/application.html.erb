@@ -12,30 +12,10 @@
 </head>
 
 <body>
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-  <div class="navbar-item title">
-  <%= link_to 'Book Management', root_path %>
-  </div>
-  </div>
-</nav>
+<%= render 'shared/navbar' %>
 <%= render 'shared/error_message' %>
   <%= yield %>
-  <footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong>BookManagement</strong> by
-      <%= link_to 'https://github.com/suke0828' do %>
-      suke0828 <i class="fab fa-github"></i>
-      <% end %>
-       The repository by Github
-      <%= link_to 'https://github.com/suke0828/Book_management' do %>
-      Book_management <i class="fab fa-github"></i>
-      <% end %>
-
-    </p>
-  </div>
-</footer>
+<%= render 'shared/footer' %>
 </body>
 
 </html>
