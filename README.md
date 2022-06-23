@@ -14,35 +14,32 @@
 
 # Book_Management
 <!-- index page -->
-ISBNコードを入力して書籍を登録できます</br>
+ISBNコードを入力して書籍を登録できます  
 <img width="100%" alt="index_page" src="https://user-images.githubusercontent.com/70358393/124338563-98a5e480-dbe3-11eb-8a07-f89ee1283fa0.png"></br>
 </br>
 
-### 使い方
-このアプリケーションを使うためには`Webpacker`のインストールが必要になります
-</br>
-From your command line:
-</br>
+## 使い方
+このアプリケーションを使うためには`Webpacker`のインストールが必要になります  
+From your command line:  
 
-```shell
-# Clone this repository
-$ git clone https://github.com/suke0828/Book_management
 
-# Go into the repository
-$ cd Book_management
+1. Clone this repository  
+```git clone https://github.com/suke0828/Book_management```  
 
-# Install dependencies
-$ rails webpacker:install
-$ rails webpacker:compile
+2. Go into the repository  
+```cd Book_management```  
 
-# Run the app
-$ docker-compose -d
-$ rails s
-```
-[http://localhost:3000](http://localhost:3000) にブラウザでアクセス
+3. Install dependencies  
+```rails webpacker:install```  
+```rails webpacker:compile```  
 
-Note:`rails webpacker:install`の際に`node`や`yarn`が入っていないとインストールできないことがあります
-</br>
+4. Run the app  
+```docker-compose up -d```  
+```rails s```  
+
+5. [http://localhost:3000](http://localhost:3000) にブラウザでアクセス  
+
+Note:`rails webpacker:install`の際に`node`や`yarn`が入っていないとインストールできないことがあります  
 
 ## 使用技術
 ・Ruby 3.0.0</br>
@@ -59,7 +56,7 @@ Rails6 + Elasticsearch + openBD</br>
 </br>
 
 <!-- new page -->
-・ISBNコードを入力して書籍登録するとElasticsearchとDBに、openBD APIから取得したデータを保存します</br>
+・ISBNコードを入力して書籍登録するとElasticsearchとDBに、openBD APIから取得したデータを保存します  
 <img width="100%" alt="new_page" src="https://user-images.githubusercontent.com/70358393/124338659-25e93900-dbe4-11eb-994f-9ad4d7d67f47.png"></br>
 </br>
 
@@ -69,7 +66,7 @@ Rails6 + Elasticsearch + openBD</br>
 </br>
 
 <!-- show page -->
-・詳細画面から登録した書籍のデータを見ることができます</br>
+・詳細画面から登録した書籍のデータを見ることができます  
 <img width="100%" alt="show_page" src="https://user-images.githubusercontent.com/70358393/124338807-d2c3b600-dbe4-11eb-8394-faad4729d34a.png"></br>
 </br>
 
@@ -79,7 +76,7 @@ Rails6 + Elasticsearch + openBD</br>
 </br>
 
 ## 注意事項
-・書籍のデータがopenBDにないとDBに保存されません</br>
+・書籍のデータがopenBDにないとDBに保存されません  
 
 ## Authors
 suke0828
