@@ -292,3 +292,10 @@ docker/postgresql/*
 !.gitkeep
 docker/elasticsearch/data/*
 !.gitkeep
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
