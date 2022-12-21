@@ -24,6 +24,20 @@ From your command line:
 
 
 1. Clone this repository  
+
+```git clone https://github.com/suke0828/Book_management```  
+
+2. Go into the repository  
+```cd Book_management```  
+
+3. Install dependencies  
+```rails webpacker:install```  
+```rails webpacker:compile```  
+
+4. Run the app  
+```docker-compose up -d```  
+```rails s```  
+
 ```
 git clone https://github.com/suke0828/Book_management
 ```  
@@ -50,6 +64,7 @@ docker-compose up -d
 ```
 rails s
 ```  
+
 
 5. [http://localhost:3000](http://localhost:3000) にブラウザでアクセス  
 
