@@ -24,6 +24,7 @@ From your command line:
 
 
 1. Clone this repository  
+
 ```git clone https://github.com/suke0828/Book_management```  
 
 2. Go into the repository  
@@ -36,6 +37,34 @@ From your command line:
 4. Run the app  
 ```docker-compose up -d```  
 ```rails s```  
+
+```
+git clone https://github.com/suke0828/Book_management
+```  
+
+2. Go into the repository  
+```
+cd Book_management
+```  
+
+3. Install dependencies  
+```
+rails webpacker:install
+```  
+
+```
+rails webpacker:compile
+```  
+
+4. Run the app  
+```
+docker-compose up -d
+```
+
+```
+rails s
+```  
+
 
 5. [http://localhost:3000](http://localhost:3000) にブラウザでアクセス  
 
@@ -52,7 +81,7 @@ Note:`rails webpacker:install`の際に`node`や`yarn`が入っていないと�
 ・openBD(書籍情報・書影API)</br>
 
 ## アプリの機能の説明
-Rails6 + Elasticsearch + openBD</br>
+`Rails6` + `Elasticsearch` + `openBD`</br>
 </br>
 
 <!-- new page -->
